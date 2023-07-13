@@ -42,7 +42,7 @@
 
 @media (max-width: 920px) and (min-width: 0px) {
  .form-container{
-  max-width: 80%;
+  width: 80%;
   margin: auto;
   margin-bottom: 20px;
   min-height: 20vh;
