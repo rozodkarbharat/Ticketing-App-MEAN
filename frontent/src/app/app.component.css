@@ -4,3 +4,11 @@
   gap: 10%;
   justify-content: center;
 }
+
+@media (max-width: 920px) and (min-width: 0px) {
+  .app-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

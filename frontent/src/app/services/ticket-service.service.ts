@@ -14,11 +14,11 @@ export class TicketServiceService implements OnInit {
   ngOnInit() {}
 
   getData(): Observable<any> {
-    return this.http.get<any>('http://localhost:8000/getseats');
+    return this.http.get<any>('https://ticketing-1lak.onrender.com/getseats');
   }
 
   ResetBoard(): Observable<any> {
-    return this.http.patch<any>('http://localhost:8000/reset', {
+    return this.http.patch<any>('https://ticketing-1lak.onrender.com/reset', {
       headers: { 'Content-Type': 'application/json' },
     });
   }
@@ -28,7 +28,7 @@ export class TicketServiceService implements OnInit {
   }
   bookSeats(numberOfSeats:number): Observable<any> {
     console.log(numberOfSeats,"book")
-    return this.http.post<any>('http://localhost:8000/book',{
+    return this.http.post<any>('https://ticketing-1lak.onrender.com/book',{
       headers: { 'Content-Type': 'application/json'},
       numberOfSeats
     })

@@ -12,6 +12,7 @@
   </div>
 
   <form #myForm="ngForm" class="form" (ngSubmit)="onSubmit()">
+    <span>Enter No of seats Ex. 2 </span>
     <input
       name="seatcount"
       [(ngModel)]="seats"
@@ -37,5 +38,4 @@
     <button class="submit-btn" name="Book" type="submit">Book</button>
   </form>
 
-  {{ seats }}
 </div>
