@@ -1,0 +1,41 @@
+<div class="form-container">
+  <button (click)="Reset()" class="reset-btn">Reset</button>
+  <div>
+    <h4>
+      Recently Booked seats :
+      {{
+        recentlyBookedSeats.length > 0
+          ? recentlyBookedSeats.join(" ")
+          : "No seats booked recently"
+      }}
+    </h4>
+  </div>
+
+  <form #myForm="ngForm" class="form" (ngSubmit)="onSubmit()">
+    <input
+      name="seatcount"
+      [(ngModel)]="seats"
+      #seatInput="ngModel"
+      class="seat-input"
+      type="number"
+      placeholder="Enter Number of seats"
+      min="1"
+      max="7"
+      required
+    />
+    <div *ngIf="seatInput.invalid && (seatInput.dirty || seatInput.touched)">
+      <div style="color: red" *ngIf="seatInput.errors">
+        {{
+          (seatInput.errors["max"] &&
+            "*Please enter a value less than or equal to 7") ||
+            (seatInput.errors["min"] &&
+              "*Please enter a value greater than or equal to 1.") ||
+            (seatInput.errors["required"] && "*Number of seats is required.")
+        }}
+      </div>
+    </div>
+    <button class="submit-btn" name="Book" type="submit">Book</button>
+  </form>
+
+  {{ seats }}
+</div>

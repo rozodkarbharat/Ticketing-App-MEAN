@@ -1,0 +1,28 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  width: 350px;
+  background-color: #f2f2f2;
+  padding: 10px;
+  border-radius: 10px;
+  gap: 10px;
+}
+
+.seat-image {
+  /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+  border: none;
+}
+
+.seat-number {
+  padding: 0;
+  margin: 0;
+  background: transparent;
+}
+
+.grid-item {
+  margin: auto;
+  background-color: white;
+  border-radius: 10px;
+  height: 60px;
+  text-align: center;
+}

@@ -1,0 +1,6 @@
+.app-container{
+  margin-top: 50px;
+  display: flex;
+  gap: 10%;
+  justify-content: center;
+}

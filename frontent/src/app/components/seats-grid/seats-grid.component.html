@@ -1,0 +1,13 @@
+<div style="display: flex; justify-content: space-around;">
+  <div style="display: flex; gap: 10%;align-items: center;"><img src="../../../assets/chair.png" style="border-radius:5px; width: 40px;height: 45px;background-color: red;" alt=""> <p>Reserved Seats</p></div>
+  <div style="display: flex;gap: 10%;align-items: center;"><img src="../../../assets/chair.png" style="background-color: rgb(75,181,67) ;border-radius:5px; width: 40px;height: 45px;" alt=""><p>Available Seats</p></div>
+</div>
+<div class="grid" >
+
+
+<div class="grid-item" *ngFor="let item of data" [ngStyle]="{'background-color': item.isBooked  ? 'red' : 'rgb(75,181,67)','color': item.isBooked  ? 'white' : ''}">
+  <img  class="seat-image"  style="width: 35px;border-radius: 5px;" src="../../../assets/chair.png" alt="">
+  <p class="seat-number">{{item.id}}</p>
+</div>
+
+</div>
